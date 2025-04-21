@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Flood Escape 2 Merch Shop</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+      </nav>
+    </header>
+    <div id="message" class="container"></div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const msg = params.get('success') === 'true' ? 'Оплата прошла успешно!' : 'Оплата не была завершена.';
+      document.getElementById('message').textContent = msg;
+    </script>
+  </body>
+</html>
